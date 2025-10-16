@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Lista de Compras</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="content">
+            <img src="./assets/icons/logo.svg" alt="">
+			<button type="button" class="back"><- Voltar</button>
+			<h1>Compras da semana</h1>
+		</header>
+
+		<section class="add-item content">
+			<form action="" method="post" enctype="multipart/form-data">
+				<input
+					type="text"
+					class="item-name"
+					id="item-name"
+					name="item-name"
+					placeholder="Adicione um novo item"
+				/>
+				<button id="submit" type="submit">Adicionar item</button>
+			</form>
+		</section>
+
+		<section class="item-list content">
+			<ul id="list"></ul>
+			<div class="exclusion-message hidden">
+				<img src="./assets/icons/warning-circle.svg" alt="" />
+				<span>O item foi removido da lista</span>
+                <button type="button" onclick="hideExclusionWarning()"><img src="./assets/icons/delete-small.svg" alt="" /></button>
+			</div>
+
+		<script src="scripts.js"></script>
+	</body>
+</html>
